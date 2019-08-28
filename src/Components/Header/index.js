@@ -106,7 +106,11 @@ function Header(props) {
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
-  onDrawerToggle: PropTypes.func.isRequired,
+  onDrawerToggle: PropTypes.func,
 };
+
+Header.defaultProps = {
+  onDrawerToggle: null
+}
 
 export default withStyles(styles)(Header);
